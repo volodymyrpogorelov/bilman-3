@@ -1,0 +1,13 @@
+html {
+    background-color: #FFEFD5;
+}
+
+html, body {
+	overflow: hidden;
+    width:100%; 
+    min-height: 100%;
+}
+
+body {
+	background-color: transparent;
+}
