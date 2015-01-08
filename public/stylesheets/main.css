@@ -1,13 +1,52 @@
+.center {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
 html {
-    background-color: #FFEFD5;
+    background: url(../images/main_background.png);
+    background-repeat: cover;
 }
 
 html, body {
-	overflow: hidden;
+	padding: 0;
+	margin: 0;
     width:100%; 
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
 	background-color: transparent;
+	position: relative;
 }
+
+#main_container {
+	background: url(../images/center_background.png);
+    background-size: 100% 100%;
+    height: 100%;
+    width: 24cm;
+    position: relative;
+} 
+
+#header_container {
+	position: relative;
+	width: 100%;
+	height: 18%;
+	background-color: blue;
+	/* background: url(../images/header_background.png); */
+	background-size: 100.45% 100%;
+}
+
+#middle_container {
+	position: relative;
+	height: 77%;
+	width: 100%;
+}
+
+#footer_container {
+	position: relative;
+	height: 5%;
+	width: 100%;
+	background-color: blue;
+}
+
