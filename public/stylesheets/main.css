@@ -43,6 +43,32 @@ body {
 	width: 100%;
 }
 
+#middle_left, #middle_center, #middle_right {
+	height: 100%;
+}
+
+#middle_left {
+	position: relative;
+	width: 22%;
+	background-color: white;
+}
+
+#middle_center {
+	position: absolute;
+	width: 60%;
+	left: 22%;
+	top: 0;
+	background-color: green;
+}
+
+#middle_right {
+	position: absolute;
+	width: 18%;
+	left: 82%;
+	top: 0;
+	background-color: white;
+}
+
 #footer_container {
 	position: relative;
 	height: 5%;
