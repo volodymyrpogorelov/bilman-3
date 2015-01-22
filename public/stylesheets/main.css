@@ -50,7 +50,47 @@ body {
 #middle_left {
 	position: relative;
 	width: 22%;
-	background-color: white;
+	/* background-color: white; */
+}
+
+#adv1 {
+	position: relative;
+	border: 4px double black; 
+	top: 1%;
+	width: 98%;
+	height: 20%;
+}
+
+#menu {
+	position: relative;
+	margin-left: 4%;
+	top: 1%;	
+	width: 95%;
+	height: 75%;
+}
+
+.menu_item_container {
+	position: relative;
+	width: 100%;
+	height: 9%;
+	margin-top: 4%;
+	background-color: #002d98;
+	border-radius: 30px; 
+}
+
+.menu_item {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 6%;
+	width: 98%;
+	height: 88%;
+	margin-top: 4%;
+	background: -webkit-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* Standard syntax */
+	border-radius: 30px; 
 }
 
 #middle_center {
@@ -58,7 +98,17 @@ body {
 	width: 60%;
 	left: 22%;
 	top: 0;
-	background-color: green;
+}
+
+#content_container {
+	position: relative;
+	top: 1%;
+	left: 1%;
+	width: 98%;
+	height: 98%;
+	background-image: url(../images/content_background.png);
+	background-position: center center;
+	background-size: 300% 300%;
 }
 
 #middle_right {
@@ -66,13 +116,28 @@ body {
 	width: 18%;
 	left: 82%;
 	top: 0;
-	background-color: white;
+}
+
+#calendar {
+	position: relative;
+	border: 1px solid black; 
+	top: 1%;
+	width: 90%;
+	height: 20%;
+}
+
+#adv2 {
+	position: relative;
+	border: 4px double black; 
+	top: 5%;
+	width: 90%;
+	height: 20%;
 }
 
 #footer_container {
 	position: relative;
 	height: 5%;
 	width: 100%;
-	background-color: blue;
+	background-color: #003399;
 }
 
