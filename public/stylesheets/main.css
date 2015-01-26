@@ -16,6 +16,7 @@ html, body {
 }
 
 body {
+	min-height: 24cm;
 	background-color: transparent;
 	position: relative;
 }

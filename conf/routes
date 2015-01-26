@@ -5,5 +5,24 @@
 # Home page
 GET     /                           controllers.Application.index
 
+# News page
+GET     /news                           controllers.Application.news
+
+# Schedule page
+GET     /schedule                           controllers.Application.schedule
+
+# Photos page
+GET     /photos                           controllers.Application.photos
+
+# Videos page
+GET     /videos                           controllers.Application.videos
+
+# COntacts page
+GET     /contacts                           controllers.Application.contacts
+
+# Forum page
+GET     /forum                           controllers.Application.forum
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
