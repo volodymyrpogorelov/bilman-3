@@ -98,6 +98,13 @@ body {
 	text-align: center;
 }
 
+.menu_item:HOVER {
+	background: -webkit-linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* Standard syntax */
+}
+
 .menu_item a {
 	position: relative;
 	text-decoration: none;
@@ -106,6 +113,10 @@ body {
 	font-style: italic;
 	font-size: large;
 	top: 15%;
+}
+
+.menu_item a:HOVER {
+	text-decoration: underline;
 }
 
 #skater_man {
