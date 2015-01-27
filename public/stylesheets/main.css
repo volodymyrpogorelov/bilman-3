@@ -83,19 +83,24 @@ body {
 }
 
 .menu_item {
+	display: block;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	top: 6%;
+	top: 10%;
 	width: 98%;
-	height: 87%;
-	margin-top: 4%;
+	height: 82%;
 	background: -webkit-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Safari 5.1 to 6.0 */
   	background: -o-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Opera 11.1 to 12.0 */
   	background: -moz-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Firefox 3.6 to 15 */
   	background: linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* Standard syntax */
 	border-radius: 30px;
 	text-align: center;
+	text-decoration: none;
+	color: blue;
+	font-family: "Verdana", Geneva, sans-serif;
+	font-style: italic;
+	font-size: large;
 }
 
 .menu_item:HOVER {
@@ -103,20 +108,7 @@ body {
   	background: -o-linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* For Opera 11.1 to 12.0 */
   	background: -moz-linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* For Firefox 3.6 to 15 */
   	background: linear-gradient(#a274a0, #b793b7, #d9c6d8, #ffffff); /* Standard syntax */
-}
-
-.menu_item a {
-	position: relative;
-	text-decoration: none;
-	color: blue;
-	font-family: "Verdana", Geneva, sans-serif;
-	font-style: italic;
-	font-size: large;
-	top: 15%;
-}
-
-.menu_item a:HOVER {
-	text-decoration: underline;
+  	text-decoration: underline;
 }
 
 #skater_man {
