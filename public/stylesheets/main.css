@@ -40,6 +40,27 @@ body {
 	background-size: 100% 100%;
 }
 
+#title {
+	position: absolute;
+	top: 12%;
+	left: 27%;
+	color: #3f6ece;
+	font-size: xx-large;
+	font-style: oblique;
+	font-family: fantasy;
+}
+
+#club_name {
+	position: absolute;
+	top: 45%;
+	left: 39%;
+	color: #3366cc;
+	font-size: 52px;
+	font-weight: bold;
+	font-family: fantasy;
+	font-style: oblique;
+}
+
 #middle_container {
 	position: relative;
 	height: 77%;
@@ -87,9 +108,10 @@ body {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	top: 10%;
+	top: 9.2%;
 	width: 98%;
 	height: 82%;
+	line-height: 165%;
 	background: -webkit-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Safari 5.1 to 6.0 */
   	background: -o-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Opera 11.1 to 12.0 */
   	background: -moz-linear-gradient(#ffffff, #d9c6d8, #b793b7, #a274a0); /* For Firefox 3.6 to 15 */
@@ -97,6 +119,7 @@ body {
 	border-radius: 30px;
 	text-align: center;
 	text-decoration: none;
+	vertical-align: middle;
 	color: blue;
 	font-family: "Verdana", Geneva, sans-serif;
 	font-style: italic;
