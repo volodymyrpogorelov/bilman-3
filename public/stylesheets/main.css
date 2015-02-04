@@ -70,21 +70,28 @@ body {
 }
 
 #middle_left, #middle_center, #middle_right {
-	height: 100%;
+	vertical-align: top;
 }
 
 #middle_left {
-	position: relative;
 	width: 22%;
-	/* background-color: white; */
 }
+
+#middle_center {
+	width: 60%;
+}
+
+#middle_right {
+	width: 18%;
+}
+
 
 #adv1 {
 	position: relative;
 	border: 4px double black; 
 	top: 1mm;
 	left: 2.2%;
-	width: 95%;
+	width: 92%;
 	height: 45mm;
 }
 
@@ -183,28 +190,13 @@ body {
 	background-size: auto 100%;
 }
 
-#middle_center {
-	position: absolute;
-	width: 60%;
-	left: 22%;
-	top: 0;
-}
-
 #content_container {
 	position: relative;
 	top: 1mm;
 	left: 1%;
-	width: 98%;
-	min-height: 98%;
-	height: auto;
+	width: 99%;
+	min-height: 195mm;
 	background: rgba(255,255,255,0.5);
-}
-
-#middle_right {
-	position: absolute;
-	width: 18%;
-	left: 82%;
-	top: 0;
 }
 
 #calendar {
@@ -237,7 +229,7 @@ body {
 #adv3 {
 	position: relative;
 	border: 4px double black; 
-	top: 8mm;
+	top: 6mm;
 	width: 90%;
 	height: 40mm; 
 }
