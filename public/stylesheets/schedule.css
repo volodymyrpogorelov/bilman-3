@@ -1,0 +1,8 @@
+#schedule {
+	margin-top: 10mm;
+}
+
+#schedule table, #schedule table th, #schedule table td {
+	border: 1px solid black;
+}
+

@@ -1,11 +1,11 @@
 @* schedule Template File *@
 @(param: Any)
 
-@main("Расписание") {
-    <div id="schedule">
-    	<table>
-    		<th>
-    			РАСПИСАНИЕ ТРЕНИРОВОК
+@main("Расписание", "schedule.css") {
+    <div id="schedule" class="center">
+    	<table class="center">
+    		<th colspan="8">
+    			РАСПИСАНИЕ ТРЕНИРОВОК (ВЗРОСЛЫЕ)
     		</th>
     		<tr>
     			<td>
@@ -22,8 +22,6 @@
     			</td>
     			<td>
     				Чт
-    			</td>
-    			<td>
     			</td>
     			<td>
     				Пт
@@ -270,5 +268,16 @@
     			</td>
     		</tr>
     	</table>
+    	
+    	<p></p>
+    	<p>
+    	ЗАЛ - 40 грн. (за 1 занятие)
+    	</p>
+    	<p>
+    	ЛЁД - 90 грн. (за 1 занятие) 
+    	</p>
+    	<p>
+    		Аренда коньков в стоимость занятия не входит.
+    	</p>
     </div>
 }
