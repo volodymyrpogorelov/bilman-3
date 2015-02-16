@@ -11,6 +11,9 @@ GET     /news                           controllers.Application.news
 # Schedule page
 GET     /schedule                           controllers.Application.schedule
 
+# Schedule page
+GET     /schedule_children                           controllers.Application.schedule_children
+
 # Photos page
 GET     /photos                           controllers.Application.photos
 

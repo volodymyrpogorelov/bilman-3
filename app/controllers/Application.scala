@@ -17,6 +17,10 @@ object Application extends Controller {
     Ok(views.html.schedule("Your new application is ready."))
   }
   
+  def schedule_children = Action {
+    Ok(views.html.schedule_children("Your new application is ready."))
+  }
+  
   def photos = Action {
     Ok(views.html.photos("Your new application is ready."))
   }
