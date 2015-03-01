@@ -1,0 +1,13 @@
+#main_gallery {
+	width: 16cm;
+	height: 10.5cm;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	margin-top: 2mm;
+}
+
+#main_gallery img {
+	width: 100%;
+	height: 100%;
+}
