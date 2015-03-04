@@ -208,9 +208,24 @@ body {
 #calendar {
 	position: relative;
 	border: 1px solid black; 
-	top: 2mm;
-	width: 90%;
-	height: 40mm;
+	top: 0.8mm;
+	width: 92%;
+	height: 38.6mm;
+	background-color: white;
+}
+
+#calendar table {
+	border-collapse: collapse;
+}
+
+#calendar table th {
+	background-color: #bb252d;
+	color: white
+}
+
+#calendar table td {
+	border-bottom: 1px black solid;
+	border-right: 1px black solid;
 }
 
 #adv2 {
