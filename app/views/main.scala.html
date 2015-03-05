@@ -73,8 +73,11 @@
         		<td id="middle_right">
         			<div id="calendar" class="center">
         				<table>
+        				@import controllers.utils.CalendarUtils
         					<th colspan="7">
-        						Март 2015
+        						@{
+        							CalendarUtils.getMonth + "  " + CalendarUtils.getYear
+        					     }
         					</th>
         					<tr>
         						<td>
@@ -101,9 +104,15 @@
         					</tr>
         					@for(i <-0 to 4){
         						<tr>
-        							@for(i<-0 to 6){
+        							@for(j<-0 to 6){
         								<td>
-        									28
+        									@{ val tmp = CalendarUtils.getDays(i, j) 
+        									   if(tmp == 0){
+        									   	" "
+        									   }else {
+        									   	tmp
+        									   }
+        									}
         								</td>
         							}
         						</tr>
