@@ -76,7 +76,7 @@ body {
 }
 
 #middle_left {
-	width: 19%;
+	width: 18%;
 }
 
 #middle_center {
@@ -84,7 +84,7 @@ body {
 }
 
 #middle_right {
-	width: 18%;
+	width: 19%;
 }
 
 
@@ -209,9 +209,18 @@ body {
 	position: relative;
 	border: 1px solid black; 
 	top: 0.8mm;
-	width: 92%;
-	height: 38.6mm;
+	left: 0.2mm;
+	width: 98%;
+	height: 45.4mm;
 	background-color: white;
+	font-size: 14px;
+}
+
+.weekday {
+	color: blue;
+}
+.weekend_day {
+	color: #cc0000;
 }
 
 #calendar table {
@@ -220,12 +229,22 @@ body {
 
 #calendar table th {
 	background-color: #bb252d;
-	color: white
+	color: white;
+	height: 8mm;
 }
 
 #calendar table td {
 	border-bottom: 1px black solid;
 	border-right: 1px black solid;
+}
+
+#calendar table tr:nth-child(2) td {
+	background-color: #d3d7cf;
+	font-style: italic;
+}
+
+#current_calendar_day {
+	border: 2px orange solid;
 }
 
 #adv2 {
@@ -254,7 +273,6 @@ body {
 	width: 90%;
 	height: 40mm; 
 }
-
 
 #footer_container {
 	margin-top: 1mm;

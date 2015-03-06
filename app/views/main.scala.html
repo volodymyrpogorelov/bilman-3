@@ -76,41 +76,50 @@
         				@import controllers.utils.CalendarUtils
         					<th colspan="7">
         						@{
-        							CalendarUtils.getMonth + "  " + CalendarUtils.getYear
+        							CalendarUtils.getMonth + "   " + CalendarUtils.getYear
         					     }
         					</th>
         					<tr>
-        						<td>
+        						<td class="weekday">
         						Пн
         						</td>
-        						<td>
+        						<td class="weekday">
         						Вт
         						</td>
-        						<td>
+        						<td class="weekday">
         						Ср
         						</td>
-        						<td>
+        						<td class="weekday">
         						Чт
         						</td>
-        						<td>
+        						<td class="weekday">
         						Пт
         						</td>
-        						<td>
+        						<td class="weekend_day">
         						Сб
         						</td>
-        						<td>
+        						<td class="weekend_day">
         						Вс
         						</td>
         					</tr>
-        					@for(i <-0 to 4){
+        					@for(i <-0 to 5){
         						<tr>
         							@for(j<-0 to 6){
-        								<td>
+        								<td class= @{
+        									if(j > 4)
+        										"weekend_day" 
+        									else 
+        										"weekday"
+        									}
+        								>
         									@{ val tmp = CalendarUtils.getDays(i, j) 
-        									   if(tmp == 0){
-        									   	" "
+        									   if(tmp < 0){ // indicates current day (today)
+        									   	 <span id="current_calendar_day">
+        									   	 	{-tmp}
+        									   	 </span>
         									   }else {
-        									   	tmp
+        									    if(tmp == 0) " "
+        									    else	tmp
         									   }
         									}
         								</td>
