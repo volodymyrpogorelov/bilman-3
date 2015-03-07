@@ -42,17 +42,14 @@ object CalendarUtils {
       case None => 0
     }
   }
-  def getDays(rw : Int, cl : Int) : Int = {
+  def getDays(rw : Int, cl : Int) : CalendarDay = {
     val res = rw*7 + cl + 1 - dayOfWeekForBegOfMonth;
-    if((res < 0) || (res > daysInMonth)){
-      0
-    }else{
-      if(res == getCurrentDay){
-        -res
-      }else {
-        res
-      }
+    if(res < 0){
+      new CalendarDay(0, false, false)
+    }else { 
+      if(res > daysInMonth) new CalendarDay(res - daysInMonth, false, false)
+      else new CalendarDay(res, res == getCurrentDay, true)
     }
   }
-  val getCurrentDay : Integer = 29//instance.get(Calendar.DAY_OF_MONTH)
+  val getCurrentDay : Integer = instance.get(Calendar.DAY_OF_MONTH)
 }

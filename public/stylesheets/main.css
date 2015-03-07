@@ -207,13 +207,10 @@ body {
 
 #calendar {
 	position: relative;
-	border: 1px solid black; 
 	top: 0.8mm;
 	left: 0.2mm;
-	width: 98%;
-	height: 45.4mm;
-	background-color: white;
-	font-size: 14px;
+	width: 45mm;
+	height: 48.0mm;
 }
 
 .weekday {
@@ -225,17 +222,28 @@ body {
 
 #calendar table {
 	border-collapse: collapse;
+	font-size: 14px;
+	font-family: monospace;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #calendar table th {
 	background-color: #bb252d;
 	color: white;
 	height: 8mm;
+	border: 1px black solid;
+	font-family: sans-serif;
 }
 
 #calendar table td {
 	border-bottom: 1px black solid;
 	border-right: 1px black solid;
+	width: 5mm;
+	height: 5mm;
+	background-color: white;
 }
 
 #calendar table tr:nth-child(2) td {
@@ -243,8 +251,16 @@ body {
 	font-style: italic;
 }
 
+#calendar table tr td:FIRST-CHILD {
+	border-left: 1px black solid;
+}
+
 #current_calendar_day {
-	border: 2px orange solid;
+	border: 2px #ff7e00 solid;
+}
+
+.day_of_other_month {
+	color: #b5b5b5;
 }
 
 #adv2 {

@@ -5,6 +5,7 @@
 <html>
     <head>
         <title>@title</title>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.css">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         @if(cssFile != null){
         	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/" + cssFile)">
@@ -74,6 +75,7 @@
         			<div id="calendar" class="center">
         				<table>
         				@import controllers.utils.CalendarUtils
+        				@import controllers.utils.CalendarDay
         					<th colspan="7">
         						@{
         							CalendarUtils.getMonth + "   " + CalendarUtils.getYear
@@ -112,14 +114,20 @@
         										"weekday"
         									}
         								>
+        									
         									@{ val tmp = CalendarUtils.getDays(i, j) 
-        									   if(tmp < 0){ // indicates current day (today)
+        									   if(tmp.isTodaysDay){ // indicates current day (today)
         									   	 <span id="current_calendar_day">
-        									   	 	{-tmp}
+        									   	 	{tmp.getDay}
         									   	 </span>
         									   }else {
-        									    if(tmp == 0) " "
-        									    else	tmp
+        									    if(tmp.isDayOfCurrentMonth){
+        									     tmp.getDay
+        									    }else {
+        									    	<span class="day_of_other_month">
+        									    		{tmp.getDay}
+        									    	</span>
+        									    }
         									   }
         									}
         								</td>
