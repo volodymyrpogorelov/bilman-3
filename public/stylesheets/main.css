@@ -233,16 +233,37 @@ body {
 #calendar table th {
 	background-color: #bb252d;
 	color: white;
-	height: 8mm;
+	height: 10mm;
 	border: 1px black solid;
 	font-family: sans-serif;
+	position: relative;
+}
+
+#calendar_button_backward, #calendar_button_forward{
+	width: 0;
+	height: 0;
+	position: absolute;
+	display: block;
+	top: 3.5mm;
+	border-bottom: 1.5mm solid transparent;
+    border-top: 1.5mm solid transparent;
+}
+
+#calendar_button_backward {
+	left: 4.5mm;
+    border-right: 3.5mm solid white;
+}
+
+#calendar_button_forward {
+	left: 34mm;
+    border-left: 3.5mm solid white;
 }
 
 #calendar table td {
 	border-bottom: 1px black solid;
 	border-right: 1px black solid;
-	width: 5mm;
-	height: 5mm;
+	width: 5.2mm;
+	height: 5.2mm;
 	background-color: white;
 }
 
