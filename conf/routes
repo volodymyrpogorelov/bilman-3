@@ -3,28 +3,28 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           controllers.Application.index(monthOffset: Int ?= 0)
 
 # News page
-GET     /news                           controllers.Application.news
+GET     /news                           controllers.Application.news(monthOffset: Int ?= 0)
 
 # Schedule page
-GET     /schedule                           controllers.Application.schedule
+GET     /schedule                           controllers.Application.schedule(monthOffset: Int ?= 0)
 
 # Schedule page
-GET     /schedule_children                           controllers.Application.schedule_children
+GET     /schedule_children                           controllers.Application.schedule_children(monthOffset: Int ?= 0)
 
 # Photos page
-GET     /photos                           controllers.Application.photos
+GET     /photos                           controllers.Application.photos(monthOffset: Int ?= 0)
 
 # Videos page
-GET     /videos                           controllers.Application.videos
+GET     /videos                           controllers.Application.videos(monthOffset: Int ?= 0)
 
 # COntacts page
-GET     /contacts                           controllers.Application.contacts
+GET     /contacts                           controllers.Application.contacts(monthOffset: Int ?= 0)
 
 # Forum page
-GET     /forum                           controllers.Application.forum
+GET     /forum                           controllers.Application.forum(monthOffset: Int ?= 0)
 
 
 # Map static resources from the /public folder to the /assets URL path

@@ -250,12 +250,12 @@ body {
 }
 
 #calendar_button_backward {
-	left: 4.5mm;
+	left: 0.5mm;
     border-right: 3.5mm solid white;
 }
 
 #calendar_button_forward {
-	left: 34mm;
+	left: 38mm;
     border-left: 3.5mm solid white;
 }
 

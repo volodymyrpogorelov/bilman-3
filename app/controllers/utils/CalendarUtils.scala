@@ -10,14 +10,14 @@ class CalendarUtils(currentMonthOffestNotNormalized : Int) {
                                               else currentMonthOffestNotNormalized
   private val today = Calendar.getInstance
   private val shiftedMonth = today.get(Calendar.MONTH) + currentMonthOffest
-  private val currentMonth : Int = if(shiftedMonth > 0) shiftedMonth % 12
-                                   else 12 - shiftedMonth % 12
+  private val currentMonth : Int = if(shiftedMonth >= 0) shiftedMonth % 12
+                                   else 12 + shiftedMonth % 12
   private val currentYear = {
     val currentYearOffset : Int =  
-      if(shiftedMonth > 0) shiftedMonth / 12
+      if(shiftedMonth >= 0) shiftedMonth / 12
       else (shiftedMonth - 11) / 12
-    today.get(Calendar.YEAR) + currentYearOffset
-  }
+    today.get(Calendar.YEAR) + currentYearOffset 
+  } 
   
   private val currentCalendar = {
     val tmp = Calendar.getInstance()
@@ -78,7 +78,9 @@ class CalendarUtils(currentMonthOffestNotNormalized : Int) {
       new CalendarDay(daysInPrevMonth + res, false, false)
     }else { 
       if(res > daysInMonth) new CalendarDay(res - daysInMonth, false, false)
-      else new CalendarDay(res, res == getCurrentDay && currentYear == today.get(Calendar.YEAR), true)
+      else new CalendarDay(res, res == getCurrentDay && 
+                                currentYear == today.get(Calendar.YEAR) && 
+                                currentMonth == today.get(Calendar.MONTH), true)
     }
   }
   val getCurrentDay : Integer = currentCalendar.get(Calendar.DAY_OF_MONTH)

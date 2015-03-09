@@ -1,6 +1,6 @@
 @* videos Template File *@
-@(param: Any)
+@(calendarMonthOffset: Int = 0)
 
-@main("Видео") {
+@main("Видео", null, new views.utils.CalendarInfo("/videos", calendarMonthOffset)) {
     Видео
 }

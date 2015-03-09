@@ -1,7 +1,7 @@
 @* forum Template File *@
-@(param: Any)
+@(calendarMonthOffset: Int = 0)
 
 
-@main("Форум") {
+@main("Форум", null, new views.utils.CalendarInfo("/forum", calendarMonthOffset)) {
     Данный раздел находится в стадии разработки.
 }

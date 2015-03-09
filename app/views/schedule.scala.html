@@ -1,7 +1,7 @@
 @* schedule Template File *@
-@(param: Any)
+@(calendarMonthOffset: Int = 0)
 
-@main("Расписание", "schedule.css") {
+@main("Расписание", "schedule.css", new views.utils.CalendarInfo("/schedule", calendarMonthOffset)) {
     <div id="schedule" class="center">
     <h1 style="text-align: center;">
 	<span style="color:#0000ff;">Взрослая группа</span></h1>

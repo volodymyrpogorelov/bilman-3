@@ -1,6 +1,6 @@
 @* photos Template File *@
-@(param: Any)
+@(calendarMonthOffset: Int = 0)
 
-@main("Фотогалерея") {
+@main("Фотогалерея", null, new views.utils.CalendarInfo("/photos", calendarMonthOffset)) {
     Фотогалерея
 }

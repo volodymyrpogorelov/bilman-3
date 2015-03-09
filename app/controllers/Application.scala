@@ -5,36 +5,36 @@ import play.api.mvc._
 
 object Application extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  def index(calendarMonthOffset: Int) = Action {
+    Ok(views.html.index(calendarMonthOffset))
   }
   
-  def news = Action {
-    Ok(views.html.news("Your new application is ready."))
+  def news(calendarMonthOffset: Int) = Action {
+    Ok(views.html.news(calendarMonthOffset))
   }
   
-  def schedule = Action {
-    Ok(views.html.schedule("Your new application is ready."))
+  def schedule(calendarMonthOffset: Int) = Action {
+    Ok(views.html.schedule(calendarMonthOffset))
   }
   
-  def schedule_children = Action {
-    Ok(views.html.schedule_children("Your new application is ready."))
+  def schedule_children(calendarMonthOffset: Int) = Action {
+    Ok(views.html.schedule_children(calendarMonthOffset))
   }
   
-  def photos = Action {
-    Ok(views.html.photos("Your new application is ready."))
+  def photos(calendarMonthOffset: Int) = Action {
+    Ok(views.html.photos(calendarMonthOffset))
   }
   
-  def videos = Action {
-    Ok(views.html.videos("Your new application is ready."))
+  def videos(calendarMonthOffset: Int) = Action {
+    Ok(views.html.videos(calendarMonthOffset))
   }
   
-  def contacts = Action {
-    Ok(views.html.contacts("Your new application is ready."))
+  def contacts(calendarMonthOffset: Int) = Action {
+    Ok(views.html.contacts(calendarMonthOffset))
   }
   
-  def forum = Action {
-    Ok(views.html.forum("Your new application is ready."))
+  def forum(calendarMonthOffset: Int) = Action {
+    Ok(views.html.forum(calendarMonthOffset))
   }
 
 }

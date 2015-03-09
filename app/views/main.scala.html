@@ -1,4 +1,4 @@
-@(title: String, cssFile : String = null, calendarMonthOffset : Int = 0)(content: Html)
+@(title: String, cssFile : String = null, calendarInfo : views.utils.CalendarInfo)(content: Html)
 
 <!DOCTYPE html>
 
@@ -77,13 +77,15 @@
         				@import controllers.utils.CalendarUtils
         				@import controllers.utils.CalendarDay
         					<th colspan="7">
-        					   <a id="calendar_button_backward"></a> &nbsp;
+        					   <a id="calendar_button_backward" href=@calendarInfo.getRefBackward>
+        					   </a> &nbsp;
         						@{
-        							val calendar = new CalendarUtils(calendarMonthOffset)
+        							val calendar = new CalendarUtils(calendarInfo.getMonthOffset)
         							calendar.getMonth + " " + calendar.getYear
         					     }
         					     &nbsp;
-        					    <a id="calendar_button_forward"></a> 
+        					    <a id="calendar_button_forward" href=@calendarInfo.getRefForward>
+        					    </a> 
         					</th>
         					<tr>
         						<td class="weekday">
@@ -120,7 +122,7 @@
         								>
         									
         									@{ 
-        									   val tmp = new CalendarUtils(calendarMonthOffset).getDays(i, j) 
+        									   val tmp = new CalendarUtils(calendarInfo.getMonthOffset).getDays(i, j) 
         									   if(tmp.isTodaysDay){ // indicates current day (today)
         									   	 <span id="current_calendar_day">
         									   	 	{tmp.getDay}

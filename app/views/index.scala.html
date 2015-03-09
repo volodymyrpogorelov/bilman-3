@@ -1,6 +1,6 @@
-@(message: String)
+@(calendarMonthOffset: Int = 0)
 
-@main("Главная", "index.css") {
+@main("Главная", "index.css", new views.utils.CalendarInfo("/", calendarMonthOffset)) {
 	
 	<div id="main_gallery">
 		<img id="main_gallery_img" src="assets/photos/main_page/4.jpg" />
