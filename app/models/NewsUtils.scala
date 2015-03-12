@@ -1,8 +1,10 @@
 package models
 
+import scala.collection.mutable.ListBuffer
+
 
 object NewsUtils {
-  val getNews = {
+  private val allNews = {
     var res : List[NewsDescriptor] = List()
     val source = scala.io.Source.fromFile("/home/vladimir/workspace/bilman-3/app/models/news_db.txt")
     val lines = source.getLines()
@@ -23,5 +25,15 @@ object NewsUtils {
     }
     source.close()
     res
+  }
+  
+  private val newsBlocks = {
+    val tmp = allNews.grouped(NewsBlock.NEWS_PER_PAGE).toList
+    (for((x, i) <- tmp.zipWithIndex) yield new NewsBlock(i, x))
+  }
+  val numberOfBlocks : Int = newsBlocks.size 
+  
+  def nthNews(i : Int) {
+    newsBlocks(i)
   }
 }

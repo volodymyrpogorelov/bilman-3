@@ -9,8 +9,8 @@ object Application extends Controller {
     Ok(views.html.index(calendarMonthOffset))
   }
   
-  def news(calendarMonthOffset: Int) = Action {
-    Ok(views.html.news(calendarMonthOffset))
+  def news(calendarMonthOffset: Int, newsBlock : Int) = Action {
+    Ok(views.html.news(calendarMonthOffset, newsBlock))
   }
   
   def schedule(calendarMonthOffset: Int) = Action {
