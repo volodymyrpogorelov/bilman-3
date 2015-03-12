@@ -1,7 +1,12 @@
 @(calendarMonthOffset: Int = 0)
 
+@import models.NewsDescriptor
+@import models.NewsUtils
+@import views.utils.CalendarInfo
 
-@main("Новости", null, new views.utils.CalendarInfo("/news", calendarMonthOffset)) {
-     import models.*
+@main("Новости", null, new CalendarInfo("/news", calendarMonthOffset)) {
+     @for(news <- NewsUtils.getNews){
+
+     }
      
 }
