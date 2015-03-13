@@ -4,10 +4,27 @@
 @import models.NewsUtils
 @import models.NewsBlock
 @import views.utils.CalendarInfo
+@import views.utils.CalendarInfoNews
+@import views.utils.NewsHrefUtils
 
-@main("Новости", null, new CalendarInfo("/news", calendarMonthOffset)) {
-     @for(news <- NewsUtils){
-
-     }
-     
+@main("Новости", null, new CalendarInfoNews("/news", calendarMonthOffset, newsBlock)) {
+     	@for(news <- NewsUtils.nthNews(newsBlock)){
+     		<h4>@news.getDate</h4>
+     		<p>@news.getBody</p>
+     	}
+        <div id="news_pages_switch">
+            @if(newsBlock > 0){
+        		<a id="news_page_back" href=@NewsHrefUtils.buildHrefForBackBlock(calendarMonthOffset, newsBlock)>
+        			<--
+        		</a>
+        	}
+        	@for(i <- 1 to NewsUtils.numberOfBlocks){
+        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, i-1)>@i </a>
+        	}
+        	@if(newsBlock  < NewsUtils.numberOfBlocks - 1){
+        		<a id="news_page_next" href=@NewsHrefUtils.buildHrefForNextBlock(calendarMonthOffset, newsBlock, NewsUtils.numberOfBlocks)>
+        			-->
+        		</a>
+        	}
+        </div>
 }
