@@ -13,18 +13,20 @@
      		<p>@news.getBody</p>
      	}
         <div id="news_pages_switch">
-            @if(newsBlock > 0){
-        		<a id="news_page_back" href=@NewsHrefUtils.buildHrefForBackBlock(calendarMonthOffset, newsBlock)>
-        			<--
+            @if(newsBlock + 1 >= NewsBlock.BLOCKS_PER_PAGE){
+            	<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, 0)>1 </a>
+            	<a id="news_page_back" href=@NewsHrefUtils.buildHrefForBackBlock(calendarMonthOffset, newsBlock)>
+        			...
         		</a>
-        	}
-        	@for(i <- 1 to NewsUtils.numberOfBlocks){
+            }
+            @for(i <- NewsBlock.getChunkBeg(newsBlock) to NewsBlock.getChunkEnd(newsBlock, NewsUtils.numberOfBlocks)){
         		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, i-1)>@i </a>
         	}
-        	@if(newsBlock  < NewsUtils.numberOfBlocks - 1){
+        	@if(newsBlock + 1  < NewsBlock.getChunkBeg(NewsUtils.numberOfBlocks - 1)){
         		<a id="news_page_next" href=@NewsHrefUtils.buildHrefForNextBlock(calendarMonthOffset, newsBlock, NewsUtils.numberOfBlocks)>
-        			-->
+        			...
         		</a>
+        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, NewsUtils.numberOfBlocks - 1)>@NewsUtils.numberOfBlocks</a>
         	}
         </div>
 }

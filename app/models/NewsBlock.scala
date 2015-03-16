@@ -5,7 +5,19 @@ import scala.collection.generic.CanBuildFrom
 
 object NewsBlock {
   val NEWS_PER_PAGE = 8
-  val BLOCKS_PER_PAGE = 4
+  val BLOCKS_PER_PAGE = 8 // Should be 5 or bigger
+  
+  def getChunkBeg(currentNewsBlock : Int) : Int = {
+    (currentNewsBlock + 1) / BLOCKS_PER_PAGE * BLOCKS_PER_PAGE
+  }
+  
+  def getChunkEnd(currentNewsBlock : Int, numberOfBlocks : Int) : Int = {
+    val chunkBeg = getChunkBeg(currentNewsBlock)
+    if ((chunkBeg + BLOCKS_PER_PAGE - 1) >  numberOfBlocks) 
+      numberOfBlocks 
+    else 
+      chunkBeg + BLOCKS_PER_PAGE - 1 
+  }
 }
 
 class NewsBlock(page : Int, news : List[NewsDescriptor]) {
