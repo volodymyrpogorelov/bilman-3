@@ -6,7 +6,7 @@
 GET     /                           controllers.Application.index(monthOffset: Int ?= 0)
 
 # News page
-GET     /news                           controllers.Application.news(monthOffset: Int ?= 0, newsBlock : Int ?= 0)
+GET     /news                           controllers.Application.news(monthOffset: Int ?= 0, newsBlock : Int ?= 1)
 
 # Schedule page
 GET     /schedule                           controllers.Application.schedule(monthOffset: Int ?= 0)

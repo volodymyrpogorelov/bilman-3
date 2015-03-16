@@ -8,12 +8,14 @@ object NewsBlock {
   val BLOCKS_PER_PAGE = 8 // Should be 5 or bigger
   
   def getChunkBeg(currentNewsBlock : Int) : Int = {
-    (currentNewsBlock + 1) / BLOCKS_PER_PAGE * BLOCKS_PER_PAGE
+    val res = (currentNewsBlock + 1) / BLOCKS_PER_PAGE * BLOCKS_PER_PAGE
+    if(res == 0) 1
+    else res
   }
   
   def getChunkEnd(currentNewsBlock : Int, numberOfBlocks : Int) : Int = {
     val chunkBeg = getChunkBeg(currentNewsBlock)
-    if ((chunkBeg + BLOCKS_PER_PAGE - 1) >  numberOfBlocks) 
+    if ((chunkBeg + BLOCKS_PER_PAGE) >  numberOfBlocks) 
       numberOfBlocks 
     else 
       chunkBeg + BLOCKS_PER_PAGE - 1 

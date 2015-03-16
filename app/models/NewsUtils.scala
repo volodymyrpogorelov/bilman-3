@@ -6,7 +6,7 @@ import scala.collection.mutable.ListBuffer
 object NewsUtils {
   private val allNews = {
     var res : List[NewsDescriptor] = List()
-    val lines = 1 to 100
+    val lines = 1 to 200
     
     val acc : StringBuilder = new StringBuilder("")
     var state = 0
@@ -26,6 +26,6 @@ object NewsUtils {
   val numberOfBlocks : Int = newsBlocks.size 
   
   def nthNews(i : Int) : NewsBlock = {
-    newsBlocks(i)
+    newsBlocks(i - 1)
   }
 }
