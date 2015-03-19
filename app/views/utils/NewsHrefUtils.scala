@@ -16,6 +16,6 @@ object NewsHrefUtils {
   }
   
   def buildHrefForNextChunk(calendarMonthOffset: Int, currentNewsBlock : Int, numberOfNewsBlocks : Int) : String = {
-    buildHref(calendarMonthOffset, NewsBlock.getChunkEnd(currentNewsBlock, numberOfNewsBlocks))
+    buildHref(calendarMonthOffset, NewsBlock.getChunkEnd(currentNewsBlock, numberOfNewsBlocks) + 1)
   }
 }
