@@ -1,0 +1,10 @@
+#news_pages_switch a {
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	color: blue;
+}
+
+#news_pages_switch a:HOVER {
+	text-decoration: underline;
+}

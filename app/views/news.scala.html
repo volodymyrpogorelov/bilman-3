@@ -7,7 +7,7 @@
 @import views.utils.CalendarInfoNews
 @import views.utils.NewsHrefUtils
 
-@main("Новости", null, new CalendarInfoNews("/news", calendarMonthOffset, newsBlock)) {
+@main("Новости", "news.css", new CalendarInfoNews("/news", calendarMonthOffset, newsBlock)) {
      	@for(news <- NewsUtils.nthNews(newsBlock)){
      		<h4>@news.getDate</h4>
      		<p>@news.getBody</p>
@@ -20,7 +20,9 @@
         		</a>
             }
             @for(i <- NewsBlock.getChunkBeg(newsBlock) to NewsBlock.getChunkEnd(newsBlock, NewsUtils.numberOfBlocks)){
-        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, i)>@i </a>
+        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, i)>
+        			@i 
+        		</a>
         	}
         	@if(newsBlock < NewsBlock.getChunkBeg(NewsUtils.numberOfBlocks)){
         		<a id="news_page_next" href=@NewsHrefUtils.buildHrefForNextChunk(calendarMonthOffset, newsBlock, NewsUtils.numberOfBlocks)>
