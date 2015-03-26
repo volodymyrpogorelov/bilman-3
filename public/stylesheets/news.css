@@ -1,3 +1,13 @@
+#news_pages_switch {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-bottom: 1px solid #493fbf;
+	height: 8mm;
+	width: 10cm;
+}
+
 #news_pages_switch a {
 	text-align: center;
 	text-decoration: none;
