@@ -1,0 +1,12 @@
+.track {
+	margin-left: auto;
+	margin-right: auto;
+	width: 12cm;
+	height: 10cm;
+	margin-top: 10mm;
+}
+
+.track iframe{
+	width: 100%;
+	height: 100%;
+}
