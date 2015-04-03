@@ -1,3 +1,12 @@
+#tracks_title{
+	color: blue;
+}
+
+#tracks_title h2 {
+	text-align: center;
+}
+
+
 .track {
 	margin-left: auto;
 	margin-right: auto;
