@@ -2,5 +2,10 @@
 @(calendarMonthOffset: Int = 0)
 
 @main("Фотогалерея", null, new views.utils.CalendarInfo("/photos", calendarMonthOffset)) {
-    Фотогалерея
+    <div>
+    @{import controllers.utils.PhotoGalleryUtils
+    	PhotoGalleryUtils.allPhotosPath.size
+     } 
+    	
+    </div>
 }
