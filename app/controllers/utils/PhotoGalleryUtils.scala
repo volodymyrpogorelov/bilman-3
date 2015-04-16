@@ -17,7 +17,7 @@ object PhotoGalleryUtils {
     }
   }
   
-  val allPhotosPath = getListOfFiles("./public/photos/gallery/")
+  val allPhotosPath = getListOfFiles("./public/photos/gallery/").map(f => "assets/photos/gallery/" + f.getName())
   val currentPath = new java.io.File( "." ).getCanonicalPath
   
 }

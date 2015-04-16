@@ -1,11 +1,14 @@
 @* photos Template File *@
 @(calendarMonthOffset: Int = 0)
 
-@main("Фотогалерея", null, new views.utils.CalendarInfo("/photos", calendarMonthOffset)) {
-    <div>
-    @{import controllers.utils.PhotoGalleryUtils
-    	PhotoGalleryUtils.allPhotosPath.size
-     } 
-    	
-    </div>
+@import controllers.utils.PhotoGalleryUtils
+
+@main("Фотогалерея", "photos.css", new views.utils.CalendarInfo("/photos", calendarMonthOffset)) {
+    
+    @for(photo <- PhotoGalleryUtils.allPhotosPath){
+    	<div class="photo_container">
+    		<img src="@photo" width="5cm" height="5cm">
+    		</img>
+    	</div>
+    } 
 }
