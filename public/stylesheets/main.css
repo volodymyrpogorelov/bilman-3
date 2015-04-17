@@ -189,7 +189,7 @@ body {
 	position: absolute;
 	width: 90%;
 	height: 55mm;
-	top: 151mm;
+	top: 149mm;
 	right: 122mm;
 	background-image: url(../images/skater_left.png);
 	background-repeat: no-repeat;
@@ -287,12 +287,39 @@ body {
 	color: #b5b5b5;
 }
 
-#adv2 {
+#default_news {
 	position: relative;
-	border: 4px double black; 
+	border: 1px black solid; 
 	top: 10mm;
 	width: 90%;
-	height: 40mm;
+	height: 94mm;
+}
+
+#default_news_content {
+	width: 100%;
+	height: 83.5%;
+	overflow: auto;
+	background-color: #f3f3f3;
+}
+
+#default_news_header{
+	text-align: center;
+	background: linear-gradient(#ce5c00, #f57900, #fcaf3e);
+	color: white;
+	font-size: 19px;
+	height: 8mm;
+}
+
+#default_news_footer{
+	text-align: center;
+	background: linear-gradient(#fcaf3e, #f57900, #ce5c00);
+	color: white;
+	font-size: 19px;
+	height: 8mm;
+}
+
+#default_news_header span {
+	vertical-align: middle;
 }
 
 #skater_woman {
@@ -304,14 +331,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: auto 100%;
-}
-
-#adv3 {
-	position: relative;
-	border: 4px double black; 
-	top: 6mm;
-	width: 90%;
-	height: 40mm; 
 }
 
 #footer_container {

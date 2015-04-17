@@ -1,5 +1,10 @@
 @(title: String, cssFile : String = null, calendarInfo : views.utils.CalendarInfo)(content: Html)
 
+@import models.NewsDescriptor
+@import models.NewsUtils
+@import models.NewsBlock
+@import views.utils.NewsHrefUtils
+
 <!DOCTYPE html>
 
 <html>
@@ -143,11 +148,21 @@
         					}
         				</table>
         			</div>
-        			<div id="adv2" class="center">
+        			<div id="default_news" class="center">
+   		     			<div id="default_news_header">
+   		     				<span>Новости</span>
+        				</div>
+        				<div id="default_news_content">
+        					@for(news <- NewsUtils.nthNews(1)){
+     							<h5>@news.getDate</h5>
+     							@news.getBody
+     						}
+     					</div>
+     					<div id="default_news_footer">
+   		     				
+        				</div>
         			</div>
         			<div id="skater_woman" class="center">
-        			</div>
-        			<div id="adv3" class="center">
         			</div>
         		</td>
         		</tr>
