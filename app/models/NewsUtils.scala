@@ -6,7 +6,7 @@ import scala.collection.mutable.ListBuffer
 object NewsUtils {
   private val allNews = {
     var res : List[NewsDescriptor] = List()
-    val lines = 1 to 65
+    val lines = 1 to 1
     
     val acc : StringBuilder = new StringBuilder("")
     var state = 0
