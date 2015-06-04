@@ -18,3 +18,14 @@
 #news_pages_switch a:HOVER {
 	text-decoration: underline;
 }
+
+.date {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+.time {
+	background-color: #babdb6;
+	width: 15.5mm;
+}

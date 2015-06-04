@@ -1,6 +1,7 @@
 package models
 
-class NewsDescriptor(date : String, body : String) {
+class NewsDescriptor(date : String, time : String, body : String) {
   def getDate = date
   def getBody = body
+  def getTime = time
 }

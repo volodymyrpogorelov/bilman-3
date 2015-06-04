@@ -9,8 +9,17 @@
 
 @main("Новости", "news.css", new CalendarInfoNews("/news", calendarMonthOffset, newsBlock)) {
      	@for(news <- NewsUtils.nthNews(newsBlock)){
-     		<h4>@news.getDate</h4>
-     		<p>@news.getBody</p>
+     		<div class="full_date">
+     			<div class="date">
+     				@news.getDate
+     			</div> 
+     			<div class="time">
+     				@news.getTime
+				</div>
+     		</div>
+     		<div class="news_body">
+     			@news.getBody
+     		</div>
      	}
         <div id="news_pages_switch">
             @if(newsBlock > NewsBlock.BLOCKS_PER_PAGE){
