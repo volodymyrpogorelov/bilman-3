@@ -22,7 +22,8 @@
 .date {
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
+	width: 23.5mm; 
+	border-bottom: thick solid red;
 }
 
 .time {
