@@ -13,7 +13,7 @@ object NewsUtils {
     var data = ""
     var index = 0
     lines.foreach { line => 
-        res = (new NewsDescriptor("2015-01-01", "19 : 10", "С новым 2015 годом!!!")) :: res 
+        res = (new NewsDescriptor("2015-01-01", "19 : 10", "Привитання", "С новым 2015 годом!!!")) :: res 
         index += 1
     }
     res.reverse
