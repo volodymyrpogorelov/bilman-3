@@ -1,6 +1,8 @@
 package models
 
 import scala.collection.mutable.ListBuffer
+import java.util.GregorianCalendar
+import java.util
 
 
 object NewsUtils {
@@ -13,7 +15,7 @@ object NewsUtils {
     var data = ""
     var index = 0
     lines.foreach { line => 
-        res = (new NewsDescriptor("2015-01-01", "19 : 10", "Привитання", "С новым 2015 годом!!!")) :: res 
+        res = (new NewsDescriptor(new GregorianCalendar(2013,10,28), "Привітання", "С новым 2015 годом!!!")) :: res 
         index += 1
     }
     res.reverse

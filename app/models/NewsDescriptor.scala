@@ -10,4 +10,5 @@ class NewsDescriptor(datetime : Calendar, caption : String, body : String) {
   val getTime = datetime.getTime
   val getCaption = caption
   val getBody = body
+  val getDate = ""
 }
