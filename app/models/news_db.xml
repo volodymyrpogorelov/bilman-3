@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<news_database>
+    <page>
+		<date>
+		    <year>
+		    	2015
+		    </year>
+		    <month>
+		    	09
+		    </month>
+		    <day>
+		    	25
+		    </day>
+			<block>
+				<news>
+					<time>
+						12 : 10
+					</time>
+					<caption>
+						Открытие сезона
+					</caption>
+					<body>
+						Первая тренировка в новом сезоне состоится 1 октября.
+					</body>
+				</news>
+			</block>
+		</date>
+	</page>
+</news_database>
