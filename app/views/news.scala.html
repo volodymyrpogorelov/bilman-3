@@ -1,4 +1,4 @@
-@(calendarMonthOffset: Int = 0, newsBlock : Int)
+@(calendarMonthOffset: Int = 0, newsPage : Int)
 
 @import models.NewsDescriptor
 @import models.NewsUtils
@@ -7,37 +7,42 @@
 @import views.utils.CalendarInfoNews
 @import views.utils.NewsHrefUtils
 
-@main("Новости", "news.css", new CalendarInfoNews("/news", calendarMonthOffset, newsBlock)) {
-     	@for(news <- NewsUtils.nthNews(newsBlock)){
+@main("Новости", "news.css", new CalendarInfoNews("/news", calendarMonthOffset, newsPage)) {
+     	@for(date <- NewsUtils.nthPage(newsPage)){
      		<div class="full_date">
      			<div class="date">
-     				@news.getDate
+     				@date.fullDate
      			</div> 
-     			<div class="time">
-     				@news.getTime
-				</div>
-     		</div>
-     		<div class="news_body">
-     			@news.getBody
-     		</div>
+     	     </div>
+     			@for(news <- date){
+     				<div class="time">
+     					@news.getTime
+					</div>
+					<div class="news_caption">
+						@news.getCaption
+					</div>
+					<div class="news_body">
+     					@news.getBody
+     				</div>
+     			}
      	}
         <div id="news_pages_switch">
-            @if(newsBlock > NewsBlock.BLOCKS_PER_PAGE){
+            @if(newsPage > NewsBlock.BLOCKS_PER_PAGE){
             	<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, 1)>1 </a>
-            	<a id="news_page_back" href=@NewsHrefUtils.buildHrefForPrevChunk(calendarMonthOffset, newsBlock)>
+            	<a id="news_page_back" href=@NewsHrefUtils.buildHrefForPrevChunk(calendarMonthOffset, newsPage)>
         			...
         		</a>
             }
-            @for(i <- NewsBlock.getChunkBeg(newsBlock) to NewsBlock.getChunkEnd(newsBlock, NewsUtils.numberOfBlocks)){
+            @for(i <- NewsBlock.getChunkBeg(newsPage) to NewsBlock.getChunkEnd(newsPage, NewsUtils.numberOfPages)){
         		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, i)>
         			@i 
         		</a>
         	}
-        	@if(newsBlock < NewsBlock.getChunkBeg(NewsUtils.numberOfBlocks)){
-        		<a id="news_page_next" href=@NewsHrefUtils.buildHrefForNextChunk(calendarMonthOffset, newsBlock, NewsUtils.numberOfBlocks)>
+        	@if(newsPage < NewsBlock.getChunkBeg(NewsUtils.numberOfPages)){
+        		<a id="news_page_next" href=@NewsHrefUtils.buildHrefForNextChunk(calendarMonthOffset, newsPage, NewsUtils.numberOfPages)>
         			...
         		</a>
-        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, NewsUtils.numberOfBlocks)>@NewsUtils.numberOfBlocks</a>
+        		<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, NewsUtils.numberOfPages)>@NewsUtils.numberOfPages</a>
         	}
         </div>
 } 

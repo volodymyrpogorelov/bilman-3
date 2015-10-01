@@ -19,11 +19,9 @@ object NewsUtils {
     res.trim()
   }
   
-  private val allNews = {
-    var res : List[NewsDescriptor] = List()
-    val lines = 1 to 1
+  private val allNewsPages : List[Page] = {
     val rootElem = XML.loadFile("/home/vladimir/workspace/bilman-3/app/models/news_db.xml")
-    val pages : List[Page] =  (rootElem \\ "page").map { p =>  {
+   (rootElem \\ "page").map { p =>  {
            val dates : List[Date] = (p \ "date").map { x => {
                val year = extractPrimValFromTag(x, "year").toInt
                val month : Int = extractPrimValFromTag(x, "month").toInt
@@ -37,33 +35,15 @@ object NewsUtils {
                  }}.toList
                  new Block(newsList)
                }}.head 
-               new Date(1, month, day, block)
+               new Date(year, month, day, block)
              }}.toList
            new Page(dates)
        }}.toList
-    
-    val acc : StringBuilder = new StringBuilder("")
-    var state = 0
-    var data = ""
-    var index = 0
-    
-    val date_s : String  = " 2011-01-18 00:00:00.0"; 
-    val dt : SimpleDateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss"); 
-    val date = dt.parse(date_s); 
-    lines.foreach { line => 
-        res = (new NewsDescriptor(new GregorianCalendar(2013,10,28), "Привітання", "")) :: res 
-        index += 1
-    }
-    res.reverse
   }
   
-  private val newsBlocks = {
-    val tmp = allNews.grouped(NewsBlock.NEWS_PER_PAGE).toList
-    (for((x, i) <- tmp.zipWithIndex) yield new NewsBlock(i, x))
-  }
-  val numberOfBlocks : Int = newsBlocks.size 
+  val numberOfPages : Int = allNewsPages.size
   
-  def nthNews(i : Int) : NewsBlock = {
-    newsBlocks(i - 1)
+  def nthPage(i : Int) : Page = {
+    allNewsPages(i - 1)
   }
 }

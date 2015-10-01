@@ -22,11 +22,18 @@
 .date {
 	margin-left: auto;
 	margin-right: auto;
-	width: 23.5mm; 
 	border-bottom: thick solid red;
+	display: table-cell;
+}
+
+.full_date {
+	margin-left: auto;
+	margin-right: auto;
+	width: 13%;	
 }
 
 .time {
 	background-color: #babdb6;
-	width: 15.5mm;
+	display: table-cell;
+	color: #1a1a1a;
 }
