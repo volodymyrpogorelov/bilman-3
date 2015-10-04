@@ -36,4 +36,22 @@
 	background-color: #babdb6;
 	display: table-cell;
 	color: #1a1a1a;
+	float: left;
+}
+
+
+.news_caption {
+	color: blue;
+	margin-left: 16mm;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.news_caption:AFTER{
+	clear: left;
+}
+
+.news_body {
+	margin-top: 1mm;
+	margin-bottom: 5mm;
 }
