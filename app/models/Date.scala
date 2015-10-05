@@ -27,4 +27,6 @@ class Date(year : Int, month : Int, day : Int, block : Block) {
   def map[B, That](f : News => B)(implicit bf: CanBuildFrom[List[News], B, That]) : That = {
     block.getNewsList.map[B, That] (f)
   }
+  
+  val getNumberOfNews : Int = block.getNewsList.size
 }

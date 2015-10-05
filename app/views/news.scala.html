@@ -26,6 +26,9 @@
      				</div>
      			}
      	}
+     	@for(i <- 1 until NewsUtils.nthPage(newsPage).numOfFakeDiv){
+     		<div class="fake_div"> </div>
+     	}
         <div id="news_pages_switch">
             @if(newsPage > NewsBlock.BLOCKS_PER_PAGE){
             	<a href=@NewsHrefUtils.buildHref(calendarMonthOffset, 1)>1 </a>

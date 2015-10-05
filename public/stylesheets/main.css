@@ -300,6 +300,7 @@ body {
 	overflow: auto;
 	padding: 1.5mm;
 	background-color: #f3f3f3;
+	font-size: small;
 }
 
 #default_news_header{
@@ -324,6 +325,34 @@ body {
 
 #default_news_header span {
 	vertical-align: middle;
+}
+
+.default_news_date {
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: solid red;
+	display: table-cell;
+}
+
+.default_news_full_date {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;	
+}
+
+.default_news_time {
+	background-color: #babdb6;
+	display: table-cell;
+	color: #1a1a1a;
+	float: left;
+}
+
+
+.default_news_news_caption {
+	color: blue;
+	margin-left: 6mm;
+	font-style: italic;
+	text-decoration: underline;
 }
 
 #skater_woman {

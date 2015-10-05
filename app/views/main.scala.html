@@ -153,7 +153,21 @@
    		     				<span>Новости</span>
         				</div>
         				<div id="default_news_content">
-        				
+        					@for(date <- NewsUtils.nthPage(1)){
+     							<div class="default_news_full_date">
+     								<div class="default_news_date">
+     									@date.fullDate
+     								</div> 
+     	     					</div>
+     							@for(news <- date){
+     								<div class="default_news_time">
+     									@news.getTime
+									</div>
+									<div class="default_news_news_caption">
+										@news.getCaption
+									</div>
+     							}
+     						}
      					</div>
      					<div id="default_news_footer">
    		     				
