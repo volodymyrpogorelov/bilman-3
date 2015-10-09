@@ -153,20 +153,29 @@
    		     				<span>Новости</span>
         				</div>
         				<div id="default_news_content">
+        				
         					@for(date <- NewsUtils.nthPage(1)){
-     							<div class="default_news_full_date">
-     								<div class="default_news_date">
-     									@date.fullDate
-     								</div> 
-     	     					</div>
-     							@for(news <- date){
-     								<div class="default_news_time">
-     									@news.getTime
-									</div>
-									<div class="default_news_news_caption">
-										@news.getCaption
-									</div>
+        				      <table class="center">
+    							<th colspan="2">
+    								<div class="default_news_full_date">
+     									<div class="default_news_date">
+     										@date.fullDate
+     									</div> 
+     	     						</div>
+    							</th>
+    							@for(news <- date){
+    								<tr>
+     									<td class="default_news_time">
+     										<div>
+     										    @news.getTime
+     										</div>
+										</td>
+										<td class="default_news_news_caption">
+											<a href="/news"> @news.getCaption </a>
+										</td>
+									</tr>
      							}
+     							</table>
      						}
      					</div>
      					<div id="default_news_footer">

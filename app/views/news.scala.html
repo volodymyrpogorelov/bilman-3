@@ -9,22 +9,31 @@
 
 @main("Новости", "news.css", new CalendarInfoNews("/news", calendarMonthOffset, newsPage)) {
      	@for(date <- NewsUtils.nthPage(newsPage)){
-     		<div class="full_date">
-     			<div class="date">
-     				@date.fullDate
-     			</div> 
-     	     </div>
+     		<table class="center">
+    							<th colspan="2">
+    								<div class="full_date">
+     									<div class="date">
+     										@date.fullDate
+     									</div> 
+     	     						</div>
+    							</th>
      			@for(news <- date){
-     				<div class="time">
-     					@news.getTime
-					</div>
-					<div class="news_caption">
-						@news.getCaption
-					</div>
-					<div class="news_body">
-     					@news.getBody
-     				</div>
+     				<tr>
+     					<td class="time">
+     						@news.getTime
+						</td>
+						<td class="news_caption">
+							@news.getCaption
+						</td>
+					</tr>
+					<tr class="news_body">
+						<td></td>
+						<td>
+     						@news.getBody
+     					</td>
+     				</tr>
      			}
+     		</table>
      	}
      	@for(i <- 1 until NewsUtils.nthPage(newsPage).numOfFakeDiv){
      		<div class="fake_div"> </div>

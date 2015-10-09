@@ -341,10 +341,13 @@ body {
 }
 
 .default_news_time {
+	width: 13mm;
+}
+
+.default_news_time div {
 	background-color: #babdb6;
-	display: table-cell;
 	color: #1a1a1a;
-	float: left;
+	width: 100%;
 }
 
 
