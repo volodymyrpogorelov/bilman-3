@@ -20,8 +20,8 @@ object NewsUtils {
   }
   
   private val allNewsPages : List[Page] = {
-    //val filePath = "/home/vladimir/workspace/bilman-3/app/models/news_db.xml"
-    val filePath = "/home/pogorelov/Tmp/tmp/workspace/bilman-3/app/models/news_db.xml"
+    val filePath = "/home/vladimir/workspace/bilman-3/app/models/news_db.xml"
+    //val filePath = "/home/pogorelov/Tmp/tmp/workspace/bilman-3/app/models/news_db.xml"
     val rootElem = XML.loadFile(filePath)
    (rootElem \\ "page").map { p =>  {
            val dates : List[Date] = (p \ "date").map { x => {
