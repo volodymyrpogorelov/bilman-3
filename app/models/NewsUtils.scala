@@ -20,8 +20,8 @@ object NewsUtils {
   }
   
   private val allNewsPages : List[Page] = {
-    val filePath = "./public/news_db.xml"
-    val rootElem = XML.loadFile(filePath)
+    val filePath = "https://raw.githubusercontent.com/volodymyrpogorelov/bilman-3/master/public/news_db.xml"
+    val rootElem = XML.load(filePath)
    (rootElem \\ "page").map { p =>  {
            val dates : List[Date] = (p \ "date").map { x => {
                val year = extractPrimValFromTag(x, "year").toInt
