@@ -19,16 +19,15 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function changePhotosOnMainPage(prevevImg, initial){
-	var randomImg = getRandomInt(1, 5);
-	while(prevevImg == randomImg){
-		randomImg = getRandomInt(1, 5);
+function changePhotosOnMainPage(prevevImg, numOfImages, initial){
+	if(prevevImg > numOfImages){
+		prevevImg = 1;
 	}
 	var element = document.getElementById('main_gallery_img');
 	if(initial){
-		setTimeout(function(){element.src = "assets/photos/main_page/" + randomImg + ".jpg";}, 3500);
+		setTimeout(function(){element.src = "assets/photos/main_page/" + prevevImg + ".jpg";}, 3500);
 	}else{
-		element.src = "assets/photos/main_page/" + randomImg + ".jpg";
+		element.src = "assets/photos/main_page/" + prevevImg + ".jpg";
 	}
 	setTimeout(function(){element.style.opacity = "0.9";}, 3000);
 	setTimeout(function(){element.style.opacity = "0.8";}, 3100);
@@ -42,5 +41,5 @@ function changePhotosOnMainPage(prevevImg, initial){
 	setTimeout(function(){element.style.opacity = "0.8";}, 3800);
 	setTimeout(function(){element.style.opacity = "0.9";}, 3900);
 	setTimeout(function(){element.style.opacity = "1.0";}, 4000);
-	setTimeout(function(){changePhotosOnMainPage(randomImg, false)}, 3500);
+	setTimeout(function(){changePhotosOnMainPage(prevevImg + 1, numOfImages, false)}, 3500);
 }
