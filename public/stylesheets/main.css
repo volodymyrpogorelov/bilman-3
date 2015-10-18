@@ -51,7 +51,7 @@ body {
 	color: #3f6ece;
 	font-size: xx-large;
 	font-style: oblique;
-	font-family: fantasy;
+	font-family: "Times New Roman";
 }
 
 #club_name {
@@ -61,7 +61,7 @@ body {
 	color: #3366cc;
 	font-size: 52px;
 	font-weight: bold;
-	font-family: fantasy;
+	font-family: "Times New Roman";
 	font-style: oblique;
 }
 
@@ -138,9 +138,9 @@ body {
 	text-decoration: none;
 	vertical-align: middle;
 	color: blue;
-	font-family: "Verdana", Geneva, sans-serif;
+	font-family: Georgia, serif;
 	font-style: italic;
-	font-size: large;
+	font-size: 19px;
 }
 
 .sub_menu_item_container {
